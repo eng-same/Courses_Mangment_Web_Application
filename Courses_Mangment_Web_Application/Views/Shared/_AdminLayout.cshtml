@@ -1,0 +1,67 @@
+﻿<!-- _AdminLayout.cshtml -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="@Url.Action("Dashboard", "Admin")">Admin Panel</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ManageUsers", "Admin")">Manage Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ManageCourses", "Admin")">Manage Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="@Url.Action("ManageInstractors", "Admin")">Manage Instructors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        @RenderBody()
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+<!-- Index.cshtml -->
+@{
+    Layout = "_AdminLayout";
+}
+<h1>Admin Dashboard</h1>
+<p>Welcome to the admin panel.</p>
+
+<!-- ManageUsers.cshtml -->
+@{
+    Layout = "_AdminLayout";
+}
+<h1>Manage Users</h1>
+<p>Here you can manage users.</p>
+
+<!-- ManageCourses.cshtml -->
+@{
+    Layout = "_AdminLayout";
+}
+<h1>Manage Courses</h1>
+<p>Here you can manage courses.</p>
+
+<!-- ManageInstractors.cshtml -->
+@{
+    Layout = "_AdminLayout";
+}
+<h1>Manage Instructors</h1>
+<p>Here you can manage instructors.</p>
